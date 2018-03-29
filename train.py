@@ -79,6 +79,8 @@ def main(config, cuda):
         current_device = torch.cuda.current_device()
         print('Running on', torch.cuda.get_device_name(current_device))
 
+  ### 
+
     # Dataset
     dataset = CocoStuff10k(
         root=CONFIG.ROOT,
