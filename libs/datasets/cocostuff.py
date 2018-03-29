@@ -80,19 +80,19 @@ class CocoStuff10k(data.Dataset):
                 if pad_h > 0 or pad_w > 0:
                     image = cv2.copyMakeBorder(
                         image,
-                        pad_h / 2,
-                        pad_h - pad_h / 2,
-                        pad_w / 2,
-                        pad_w - pad_w / 2,
+                        pad_h // 2,
+                        pad_h - pad_h // 2,
+                        pad_w // 2,
+                        pad_w - pad_w // 2,
                         cv2.BORDER_CONSTANT,
                         value=(0.0, 0.0, 0.0),
                     )
                     label = cv2.copyMakeBorder(
                         label,
-                        pad_h / 2,
-                        pad_h - pad_h / 2,
-                        pad_w / 2,
-                        pad_w - pad_w / 2,
+                        pad_h // 2,
+                        pad_h - pad_h // 2,
+                        pad_w // 2,
+                        pad_w - pad_w // 2,
                         cv2.BORDER_CONSTANT,
                         value=(self.ignore_label, ),
                     )

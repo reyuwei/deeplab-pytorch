@@ -73,10 +73,11 @@ def main(config, cuda):
     CONFIG = Dict(yaml.load(open(config)))
 
     # CUDA check
-    cuda = cuda and torch.cuda.is_available()
-    if cuda:
-        current_device = torch.cuda.current_device()
-        print('Running on', torch.cuda.get_device_name(current_device))
+    # cuda = cuda and torch.cuda.is_available()
+    cuda = False
+    # if cuda:
+    #     current_device = torch.cuda.current_device()
+    #     print('Running on', torch.cuda.get_device_name(current_device))
 
     # Dataset
     dataset = CocoStuff10k(
@@ -161,6 +162,7 @@ def main(config, cuda):
 
         iter_loss = 0
         for i in range(1, CONFIG.ITER_SIZE + 1):
+            print(i)
             data, target = next(loader_iter)
 
             # Image

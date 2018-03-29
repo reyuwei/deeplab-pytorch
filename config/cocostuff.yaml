@@ -1,5 +1,5 @@
 DATASET: cocostuff
-ROOT: /media/kazuto1011/Extra/cocostuff/cocostuff-10k-v1.1
+ROOT: ./data/datasets/cocostuff/cocostuff-10k-v1.1
 LABELS: ./data/datasets/cocostuff/labels_2.txt
 
 IMAGE:
@@ -20,7 +20,7 @@ PYRAMIDS: [6, 12, 18, 24]
 BATCH_SIZE: 5
 IGNORE_LABEL: -1
 ITER_MAX: 20000
-ITER_SIZE: 2
+ITER_SIZE: 10
 ITER_SNAP: 5000
 ITER_TF: 100
 LR_DECAY: 10
